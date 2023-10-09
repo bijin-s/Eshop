@@ -26,7 +26,7 @@ SECRET_KEY = '-95t%=#4o3@l-(-%ok9*h%n3!0(sdchjn%+_$5#umaj-!3bg*7'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+heroku config:set DISABLE_COLLECTSTATIC=1
 
 # Application definition
 
@@ -122,10 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
-STATICFILES_DIR=[
-os.path.join(BASE_DIR,'static')
-]
+
 MEDIA_URL = "/image/download/"
 MEDIA_ROOT = BASE_DIR
 
